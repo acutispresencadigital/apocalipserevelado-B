@@ -123,7 +123,7 @@ export default function App() {
       {/* Header Countdown */}
       <div className="fixed top-0 w-full z-50 bg-brand py-3 md:py-4 shadow-[0_4px_25px_rgba(220,38,38,0.3)]">
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-center gap-3 md:gap-6">
-          <div className="flex items-center gap-2 text-white font-extrabold text-[11px] md:text-lg uppercase tracking-tight text-center">
+          <div className="flex items-center gap-2 text-white font-extrabold text-[11px] md:text-lg uppercase tracking-normal text-center">
             <Zap size={18} className="fill-white shrink-0" />
             RECEBA SEUS 3 LIVROS EM:
           </div>
@@ -135,40 +135,14 @@ export default function App() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden border-b border-divine-gold/10">
-        {/* Imagem Responsiva (Full Width) */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="w-full mb-10"
-        >
-          <a href={checkoutUrl} onClick={trackCheckout} className="block w-full cursor-pointer">
-            {/* VERSÃO MOBILE: Imagem vertical/quadrada */}
-            <img 
-              src="https://i.ibb.co/3YdxDgwS/BANNER-SITE-1.webp" 
-              alt="Apocalipse Mobile" 
-              className="block md:hidden w-full h-auto"
-              referrerPolicy="no-referrer"
-            />
-            
-            {/* VERSÃO DESKTOP: Imagem horizontal */}
-            <img 
-              src="https://i.ibb.co/p6pDyDKm/BANNER-SITE-PC.webp" 
-              alt="Apocalipse Desktop" 
-              className="hidden md:block w-full h-auto max-h-[600px] object-contain object-center"
-              referrerPolicy="no-referrer"
-            />
-          </a>
-        </motion.div>
-
-        <div className="max-w-4xl mx-auto px-4 text-center">
+      <section className="relative pt-24 pb-16 md:pt-36 md:pb-24 overflow-hidden border-b border-divine-gold/10">
+        <div className="max-w-4xl mx-auto px-6 text-center">
           {/* HEADLINE MOBILE */}
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="md:hidden font-sans text-4xl font-extrabold mb-6 leading-tight tracking-tight uppercase text-sacred-black"
+            className="md:hidden font-sans text-3xl font-extrabold mb-6 leading-snug tracking-normal uppercase text-sacred-black"
           >
             Entenda o <span className="text-brand">Apocalipse</span> de forma simples, clara e baseada na Bíblia
           </motion.h1>
@@ -178,7 +152,7 @@ export default function App() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="hidden md:block font-sans text-7xl font-extrabold mb-10 leading-[1.1] tracking-tight uppercase text-sacred-black"
+            className="hidden md:block font-sans text-5xl lg:text-7xl font-extrabold mb-10 leading-tight tracking-normal uppercase text-sacred-black"
           >
             Entenda o <span className="text-brand">Apocalipse</span> de forma simples, <br /> clara e baseada na Bíblia
           </motion.h1>
@@ -376,16 +350,16 @@ export default function App() {
             {/* List and Pricing Column */}
             <div className="space-y-6">
               <div className="text-center">
-                <h2 className="font-sans text-4xl md:text-6xl font-extrabold uppercase tracking-tight mb-8 leading-[1.1] text-sacred-black">
+                <h2 className="font-sans text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase tracking-normal mb-8 leading-tight text-sacred-black">
                   TUDO QUE VOCÊ <br /><span className="text-brand">VAI LEVAR HOJE:</span>
                 </h2>
               </div>
 
               <div className="space-y-2">
                 {[
-                  { name: "Livro: Os 4 Cavaleiros do Apocalipse", old: "37" },
-                  { name: "Livro: As 7 Trombetas do Fim", old: "37" },
-                  { name: "Livro: A Revelação do Anticristo", old: "37" },
+                  { name: "Livro: Os 4 Cavaleiros do Apocalipse", status: "Incluso" },
+                  { name: "Livro: As 7 Trombetas do Fim", status: "Incluso" },
+                  { name: "Livro: A Revelação do Anticristo", status: "Incluso" },
                   { name: "Acesso Imediato e Vitalício", status: "Incluso" },
                   { name: "Leitura Simples e Direta", status: "Incluso" },
                   { name: "Conteúdo 100% Baseado na Bíblia", status: "Incluso" }
@@ -399,15 +373,9 @@ export default function App() {
                         {item.name}
                       </span>
                     </div>
-                    {item.old ? (
-                      <div className="text-sacred-black font-bold text-xs md:text-sm whitespace-nowrap shrink-0 flex items-center">
-                        <span className="mr-1 opacity-40">R$</span> {item.old}
-                      </div>
-                    ) : (
-                      <div className="text-[9px] md:text-[10px] font-bold text-accent-green uppercase tracking-wider bg-accent-green/5 px-2 py-1 rounded border border-accent-green/20 shrink-0">
-                        {item.status}
-                      </div>
-                    )}
+                    <div className="text-[9px] md:text-[10px] font-bold text-accent-green uppercase tracking-wider bg-accent-green/5 px-2 py-1 rounded border border-accent-green/20 shrink-0">
+                      {item.status}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -416,11 +384,11 @@ export default function App() {
               <div className="wine-card p-8 bg-gradient-to-b from-celestial-sand/50 to-white border-brand/20 aggressive-shadow text-center">
                 <div className="space-y-1 mb-6">
                   <div className="text-sacred-black text-lg font-bold">De <span className="line-through decoration-brand">R$ 111,00</span> por apenas:</div>
-                  <div className="text-brand text-7xl md:text-8xl font-extrabold font-sans tracking-tight drop-shadow-[0_0_30px_rgba(220,38,38,0.15)] flex items-baseline justify-center">
+                  <div className="text-brand text-7xl md:text-8xl font-extrabold font-sans tracking-normal drop-shadow-[0_0_30px_rgba(220,38,38,0.15)] flex items-baseline justify-center">
                     <span className="text-4xl mr-1">R$</span>
                     19<span className="text-4xl text-brand/80">,90</span>
                   </div>
-                  <div className="text-sacred-black/50 text-xs font-bold uppercase tracking-normal mt-1 font-sans">
+                  <div className="text-sacred-black/50 text-xs font-bold uppercase tracking-wider mt-1 font-sans">
                     Pague no Pix, Cartão ou Boleto
                   </div>
                 </div>
@@ -430,7 +398,7 @@ export default function App() {
                   onClick={trackCheckout}
                   className="w-full inline-flex flex-col items-center justify-center gap-1 px-6 py-5 bg-brand hover:bg-brand-hover text-white rounded-full aggressive-shadow transition-all transform hover:scale-[1.02] active:scale-[0.98] text-center"
                 >
-                  <div className="flex items-center gap-2 text-xl md:text-2xl font-extrabold uppercase tracking-tight">
+                  <div className="flex items-center gap-2 text-xl md:text-2xl font-extrabold uppercase tracking-normal">
                     ACESSAR AGORA
                     <ArrowRight size={24} className="shrink-0" />
                   </div>
