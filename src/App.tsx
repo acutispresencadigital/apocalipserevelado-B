@@ -125,7 +125,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-center gap-3 md:gap-6">
           <div className="flex items-center gap-2 text-white font-extrabold text-[11px] md:text-lg uppercase tracking-normal text-center">
             <Zap size={18} className="fill-white shrink-0" />
-            RECEBA SEUS 3 LIVROS EM:
+            ACESSE O MATERIAL EM:
           </div>
           <div className="flex items-center gap-2 text-white font-mono font-bold text-[14px] md:text-2xl bg-sacred-black/20 px-3 py-1 rounded-full border border-white/30 shadow-inner">
             <Timer size={22} className="text-white shrink-0" />
@@ -144,7 +144,7 @@ export default function App() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="md:hidden font-sans text-3xl font-extrabold mb-6 leading-snug tracking-normal uppercase text-sacred-black"
           >
-            Entenda o <span className="text-brand">Apocalipse</span> de forma simples, clara e baseada na Bíblia
+            Todo cristão precisa conhecer o verdadeiro significado do <span className="text-brand">Apocalipse</span>
           </motion.h1>
 
           {/* HEADLINE DESKTOP */}
@@ -154,7 +154,7 @@ export default function App() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="hidden md:block font-sans text-5xl lg:text-7xl font-extrabold mb-10 leading-tight tracking-normal uppercase text-sacred-black"
           >
-            Entenda o <span className="text-brand">Apocalipse</span> de forma simples, <br /> clara e baseada na Bíblia
+            Todo cristão precisa conhecer o verdadeiro <br /> significado do <span className="text-brand">Apocalipse</span>
           </motion.h1>
 
           {/* SUBHEADLINE MOBILE */}
@@ -165,7 +165,7 @@ export default function App() {
             className="md:hidden mb-8 space-y-2"
           >
             <p className="text-lg text-sacred-blue font-bold leading-tight">
-              Receba 3 livros digitais com explicações simples e baseadas na Bíblia por apenas <span className="text-brand">R$19,90</span>.
+              O Apocalipse está se cumprindo agora. Você Está Preparado? <br /> Aprenda a interpretar os sinais do fim dos tempos.
             </p>
           </motion.div>
 
@@ -177,7 +177,7 @@ export default function App() {
             className="hidden md:block mb-12 max-w-3xl mx-auto text-balance"
           >
             <p className="text-2xl text-sacred-blue font-bold leading-tight">
-              Receba 3 livros digitais com explicações simples e baseadas na Bíblia por apenas <span className="text-brand font-bold">R$19,90</span>.
+              O Apocalipse está se cumprindo agora. Você Está Preparado? <br /> Aprenda a interpretar os sinais do fim dos tempos.
             </p>
           </motion.div>
 
@@ -383,7 +383,7 @@ export default function App() {
               {/* Price Reveal */}
               <div className="wine-card p-8 bg-gradient-to-b from-celestial-sand/50 to-white border-brand/20 aggressive-shadow text-center">
                 <div className="space-y-1 mb-6">
-                  <div className="text-sacred-black text-lg font-bold">De <span className="line-through decoration-brand">R$ 111,00</span> por apenas:</div>
+                  <div className="text-sacred-black text-lg font-bold">De <span className="line-through decoration-brand">R$ 67,00</span> por apenas:</div>
                   <div className="text-brand text-7xl md:text-8xl font-extrabold font-sans tracking-normal drop-shadow-[0_0_30px_rgba(220,38,38,0.15)] flex items-baseline justify-center">
                     <span className="text-4xl mr-1">R$</span>
                     19<span className="text-4xl text-brand/80">,90</span>
@@ -488,4 +488,3 @@ export default function App() {
     </div>
   );
 }
-
