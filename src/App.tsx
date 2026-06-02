@@ -165,7 +165,7 @@ export default function App() {
             className="md:hidden mb-8 space-y-2"
           >
             <p className="text-lg text-sacred-blue font-bold leading-tight">
-              O Apocalipse está se cumprindo agora. Você Está Preparado? <br /> Aprenda a interpretar os sinais do fim dos tempos.
+              O Apocalipse está se cumprindo. Você Está Preparado? <br /> Aprenda a interpretar os sinais do fim dos tempos.
             </p>
           </motion.div>
 
@@ -177,7 +177,7 @@ export default function App() {
             className="hidden md:block mb-12 max-w-3xl mx-auto text-balance"
           >
             <p className="text-2xl text-sacred-blue font-bold leading-tight">
-              O Apocalipse está se cumprindo agora. Você Está Preparado? <br /> Aprenda a interpretar os sinais do fim dos tempos.
+              O Apocalipse está se cumprindo. Você Está Preparado? <br /> Aprenda a interpretar os sinais do fim dos tempos.
             </p>
           </motion.div>
 
@@ -488,3 +488,4 @@ export default function App() {
     </div>
   );
 }
+
